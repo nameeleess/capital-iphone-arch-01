@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ARCH-01" />
+  <title>CAPITAL · IPHONE-ARCH-01</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>CAPITAL · IPHONE-ARCH-01</h1>
+        <p>Arnés técnico desechable · solo datos sintéticos · FASE 2</p>
+      </div>
+      <button id="refreshEnv" class="secondary">Actualizar entorno</button>
+    </header>
+
+    <section class="warning">
+      <strong>NO INTRODUZCAS DATOS REALES.</strong>
+      Este arnés existe únicamente para validar instalación, offline, persistencia, IndexedDB, atomicidad, backup/restore, corrupción y migración.
+    </section>
+
+    <section>
+      <h2>Entorno observado</h2>
+      <pre id="environment">Cargando…</pre>
+    </section>
+
+    <section>
+      <h2>Resultados IPH-AC-01…10</h2>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section>
+      <h2>Pruebas P1–P5</h2>
+      <div class="controls">
+        <button id="p1">P1 · Verificar instalación</button>
+        <button id="p2">P2 · Confirmar apertura offline</button>
+        <button id="p3">P3 · Persistencia y cuota</button>
+        <button id="p4create">P4 · Crear fixture sintético</button>
+        <button id="p4verify">P4 · Verificar fixture persistido</button>
+        <button id="p5">P5 · Fallo atómico inducido</button>
+      </div>
+      <p class="hint">P2 solo debe ejecutarse después de activar modo avión, cerrar por completo la web app y volver a abrirla desde la pantalla de inicio.</p>
+    </section>
+
+    <section>
+      <h2>Backup / pérdida total / restore</h2>
+      <label for="secret">Secreto sintético de recuperación</label>
+      <input id="secret" value="CAPITAL-ARCH01-SYNTHETIC-RECOVERY-ONLY-2026-7dQ9-rP4m-X2vK" autocomplete="off" spellcheck="false" />
+      <div class="controls">
+        <button id="p6valid">P6 · Exportar backup válido</button>
+        <button id="p6corrupt">P6 · Exportar backup corrupto</button>
+        <button id="p7status">P7 · Verificar pérdida total</button>
+      </div>
+      <label class="fileLabel">Seleccionar backup para restore o prueba de corrupción
+        <input id="backupFile" type="file" accept="application/json,.json,.capital-arch01-test" />
+      </label>
+      <div class="controls">
+        <button id="p8">P8 · Restaurar backup válido</button>
+        <button id="p9">P9 · Probar backup corrupto</button>
+      </div>
+      <p class="hint">P6 solo queda demostrado cuando el archivo sale del origen y P8 lo restaura después de eliminar totalmente los datos locales de esta web app.</p>
+    </section>
+
+    <section>
+      <h2>Migración / rollback</h2>
+      <div class="controls">
+        <button id="p10">P10 · Ejecutar migración sintética v0→v1 + rollback</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Evidencia</h2>
+      <div class="controls">
+        <button id="exportEvidence">Exportar informe de evidencia</button>
+        <button id="resetResults" class="danger">Reiniciar resultados del arnés</button>
+      </div>
+      <pre id="log" class="log"></pre>
+    </section>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

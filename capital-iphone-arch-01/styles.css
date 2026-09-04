@@ -1,0 +1,38 @@
+:root {
+  color-scheme: dark;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #0b0b0b;
+  color: #f2f2f2;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b0b0b; color: #f2f2f2; }
+main { width: min(960px, 100%); margin: 0 auto; padding: 16px; padding-bottom: 48px; }
+header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+h1 { font-size: 1.25rem; margin: 0 0 6px; }
+h2 { font-size: 1rem; margin: 0 0 12px; }
+p { line-height: 1.4; }
+section { border: 1px solid #383838; padding: 14px; margin-top: 14px; border-radius: 10px; background: #131313; }
+.warning { border-color: #8c5c00; background: #251a05; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+button, input { font: inherit; }
+button { border: 1px solid #666; border-radius: 8px; background: #252525; color: #fff; padding: 11px 12px; min-height: 44px; }
+button:active { transform: translateY(1px); }
+button.secondary { background: #1a1a1a; }
+button.danger { border-color: #9c3b3b; }
+input { width: 100%; margin-top: 6px; padding: 10px; min-height: 44px; border-radius: 8px; border: 1px solid #555; background: #0d0d0d; color: #fff; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #090909; border: 1px solid #2b2b2b; padding: 10px; border-radius: 8px; font-size: 0.78rem; line-height: 1.45; }
+.results { display: grid; gap: 7px; }
+.result { display: grid; grid-template-columns: 92px 86px 1fr; gap: 8px; align-items: start; border-bottom: 1px solid #2a2a2a; padding: 7px 0; }
+.status { font-weight: 700; }
+.status.PASS { color: #76d48f; }
+.status.FAIL { color: #ff7c7c; }
+.status.PENDING { color: #eac56b; }
+.hint { color: #bdbdbd; font-size: 0.82rem; }
+.fileLabel { display: block; margin-top: 14px; }
+.log { min-height: 180px; max-height: 420px; overflow: auto; }
+@media (max-width: 620px) {
+  header { display: block; }
+  header button { margin-top: 10px; width: 100%; }
+  .result { grid-template-columns: 82px 76px 1fr; font-size: 0.82rem; }
+  button { width: 100%; }
+}
